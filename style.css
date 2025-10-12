@@ -1,7 +1,7 @@
 /* --- Reset & Globales --- */
 :root {
     --background-color: #F8F9FA;
-    --text-color: #121212;
+    --text-color: #ffffff;
     --primary-accent: #00CFC1;
     --primary-accent-light: rgba(0, 207, 193, 0.2);
     --white: #FFFFFF;
@@ -16,7 +16,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body { font-family: var(--font-main); background-color: #fcfcfd; color: var(--text-color); line-height: 1.6; }
+body { font-family: var(--font-main); color: var(--text-color); line-height: 1.6; }
 
 .container { width: 90%; max-width: 1140px; margin: 0 auto; }
 
@@ -61,7 +61,7 @@ body { font-family: var(--font-main); background-color: #fcfcfd; color: var(--te
 .cta-button.secondary { background-color: var(--white); color: var(--text-color); border-color: var(--gray); }
 
 /* --- Detailed Benefits Section --- */
-.detailed-benefits-section { padding: 8rem 0; background-color: #fcfcfd; }
+.detailed-benefits-section { padding: 8rem 0;}
 .benefit-row { display: flex; align-items: center; gap: 5rem; margin-bottom: 6rem; }
 .benefit-row:last-child { margin-bottom: 0; }
 .benefit-row.reverse { flex-direction: row-reverse; }
@@ -680,16 +680,27 @@ body.dark-theme {
 /* --- VARIABLES DE COLOR POR TEMA --- */
 
 /* :root define las variables para el TEMA CLARO (por defecto) */
+/*
+--- =============================================
+--- CORRECCIÓN DE COLOR PARA TEMA CLARO
+--- =============================================
+*/
+
 :root {
-    --bg-color: #fcfcfd;
+    /* Aquí está el cambio: un azul muy claro y sutil */
+    --bg-color: -webkit-linear-gradient(to left, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+
     --text-color-primary: #121212;
     --text-color-secondary: #6C757D;
     --card-bg: #FFFFFF;
     --card-border: #eef0f2;
-    --header-bg: rgba(255, 255, 255, 0.8);
+    
+    /* Ajustamos el fondo del header para que coincida con el nuevo azul */
+    --header-bg: rgba(240, 247, 255, 0.8); 
+
     --footer-bg: #f8f9fa;
     --footer-text: #6C757D;
-    --primary-accent: #0D2C54; /* Azul oscuro */
+    --primary-accent: #0D2C54;
     --primary-accent-text: #FFFFFF;
     --cta-secondary-bg: #eef0f2;
     --cta-secondary-text: #0D2C54;
@@ -698,6 +709,7 @@ body.dark-theme {
     --input-border: #ced4da;
     --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
+
 
 /* TEMA OSCURO (Cuando el body tiene la clase 'dark-theme') */
 body.dark-theme {
@@ -724,7 +736,6 @@ body.dark-theme .main-header.scrolled{
 }
 /* --- APLICACIÓN GLOBAL DE VARIABLES --- */
 body {
-    background-color: var(--bg-color);
     color: var(--text-color-primary);
     transition: background-color 0.3s, color 0.3s;
 }
@@ -797,9 +808,7 @@ body.dark-theme .analytics-card-placeholder, .dark-plan-card, .plan-card, .conta
 .body.dark-theme dark-plan-card:hover, .plan-card:hover {
     border-color: var(--primary-accent);
 }
-body.dark-theme .benefit-tag, .plan-speed,.card-title, .balance-amount {
-    color: var(--white);
-}
+
 
 /* Formularios */
 .contact-form input, .contact-form textarea, .subscribe-form input {

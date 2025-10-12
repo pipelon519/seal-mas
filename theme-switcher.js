@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
+    // Si la página no tiene el botón, no hacemos nada.
+    if (!themeToggle) {
+        return;
+    }
+
     const body = document.body;
     const icon = themeToggle.querySelector('i');
 
-    // Función para aplicar el tema
+    // Esta función aplica el tema cambiando la clase del body y el icono del botón
     const applyTheme = (theme) => {
         if (theme === 'dark') {
             body.classList.add('dark-theme');
@@ -16,17 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Cargar el tema guardado en localStorage o detectar el del sistema
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // --- ¡AQUÍ ESTÁ EL CAMBIO! ---
+    // Ahora, si hay un tema guardado en el navegador del usuario, lo respetamos.
+    // Si es un usuario nuevo (sin tema guardado), por defecto iniciamos en 'dark'.
+    const initialTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(initialTheme);
     
-    let currentTheme = savedTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
-    applyTheme(currentTheme);
-    
-    // Listener para el botón
+    // El resto del código sigue igual: al hacer clic, cambiamos al tema opuesto
     themeToggle.addEventListener('click', () => {
         let newTheme = body.classList.contains('dark-theme') ? 'light' : 'dark';
         applyTheme(newTheme);
-        localStorage.setItem('theme', newTheme); // Guardar preferencia
+        // Y guardamos la elección del usuario para su próxima visita
+        localStorage.setItem('theme', newTheme);
     });
 });
+
