@@ -36,6 +36,15 @@ body { font-family: var(--font-main); background-color: #fcfcfd; color: var(--te
 /* --- Header Scrolled State --- */
 .main-header.scrolled { max-width: 100%; top: 0; padding-top: 0; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); }
 .main-header.scrolled .header-container { background-color: transparent; border: none; box-shadow: none; border-radius: 0; max-width: 1140px; width: 90%; margin: 0 auto; padding: 0.75rem 0; }
+.mobile-nav-toggle {
+    display: none; /* Oculto por defecto en escritorio */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1001;
+}
 
 /* --- Hero Section --- */
 .hero { text-align: center; padding: 6rem 0; }
@@ -113,14 +122,147 @@ body { font-family: var(--font-main); background-color: #fcfcfd; color: var(--te
 @media (max-width: 1024px) {
     .main-nav { display: none; }
     .benefit-row { flex-direction: column !important; gap: 3rem; }
-    .container-footer { grid-template-columns: repeat(2, 1fr); }
+    .container-footer { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+    .detailed-benefits-section { padding: 6rem 0; }
+    .benefit-title-large { font-size: 2.5rem; }
 }
+
 @media (max-width: 768px) {
-    .header-container { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .header-container { justify-content: space-between; }
     .hero { padding: 4rem 0; }
-    .hero-title { font-size: 2.2rem; }
-    .benefit-title-large { font-size: 2.2rem; }
+    .hero-title { font-size: clamp(2.2rem, 10vw, 2.8rem); line-height: 1.25; }
+    .hero-subtitle { font-size: 1rem; }
+    .hero-actions { flex-direction: column; align-items: center; }
+    .cta-button { width: 100%; max-width: 320px; justify-content: center; }
+
+    .detailed-benefits-section { padding: 4rem 0; }
+    .benefit-row { gap: 2rem; }
+    .benefit-title-large { font-size: 2rem; }
+    .benefit-description { font-size: 1rem; }
+
     .container-footer { grid-template-columns: 1fr; }
-    .footer-col { text-align: center; }
+    .footer-col { text-align: center; margin-bottom: 1rem; }
     .footer-logo, .social-links, .subscribe-form { justify-content: center; }
+}
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    /* Convierte la nav en un panel lateral oculto */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Empieza fuera de la pantalla */
+        width: 100%;
+        max-width: 400px; /* Ancho máximo del panel */
+        height: 100vh;
+        background-color: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        /* Importante: ya no es display:none, ahora es un flex container */
+        display: flex; 
+    }
+
+    /* Clase que JS añadirá para mostrar el menú */
+    .main-nav.active {
+        right: 0;
+    }
+
+    /* Estilos para los enlaces dentro del menú móvil */
+    .main-nav a {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-color);
+    }
+
+    /* Muestra el botón de hamburguesa */
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    /* Oculta el botón 'View Plans' en el header para dar espacio */
+    .cta-button-header {
+        display: none;
+    }
+    
+    /* El resto de tus estilos para tablet */
+    .benefit-row { flex-direction: column !important; gap: 3rem; }
+    .container-footer { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+    .detailed-benefits-section { padding: 6rem 0; }
+    .benefit-title-large { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .header-container { justify-content: space-between; }
+    .hero { padding: 4rem 0; }
+    .hero-title { font-size: clamp(2.2rem, 10vw, 2.8rem); line-height: 1.25; }
+    .hero-subtitle { font-size: 1rem; }
+    .hero-actions { flex-direction: column; align-items: center; }
+    .cta-button { width: 100%; max-width: 320px; justify-content: center; }
+
+    .detailed-benefits-section { padding: 4rem 0; }
+    .benefit-row { gap: 2rem; }
+    .benefit-title-large { font-size: 2rem; }
+    .benefit-description { font-size: 1rem; }
+    
+    .main-nav { max-width: 100%; } /* El menú ocupa toda la pantalla */
+
+    .container-footer { grid-template-columns: 1fr; }
+    .footer-col { text-align: center; margin-bottom: 1rem; }
+    .footer-logo, .social-links, .subscribe-form { justify-content: center; }
+}
+/* --- Estilos para el Icono de Hamburguesa (CSS Puro) --- */
+.hamburger-icon {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--text-color); /* Usa el color de tu texto */
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+/* Posición de cada barrita */
+.hamburger-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger-icon span:nth-child(2) {
+    top: 7px;
+}
+
+.hamburger-icon span:nth-child(3) {
+    top: 14px;
+}
+
+/* --- Animación a 'X' cuando el menú está activo --- */
+/* Esta clase 'active' la añadirá JavaScript al botón */
+.mobile-nav-toggle.active .hamburger-icon span:nth-child(1) {
+    top: 7px;
+    transform: rotate(135deg);
+}
+
+.mobile-nav-toggle.active .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.mobile-nav-toggle.active .hamburger-icon span:nth-child(3) {
+    top: 7px;
+    transform: rotate(-135deg);
 }
