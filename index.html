@@ -1,14 +1,95 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Señal Más | Conexión sin límites</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c361859e6c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">Señal<span class="accent-color">+</span></h1>
+            <nav class="main-nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#beneficios">Beneficios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Más conexión. Más velocidad. Más señal.</h2>
+                <p class="hero-subtitle">Transformamos la manera en que te conectas con el mundo.</p>
+                <a href="#planes" class="cta-button">Descubre nuestros planes</a>
+            </div>
+        </section>
+
+        <section id="beneficios" class="benefits-section">
+            <div class="container">
+                <div class="benefit-card">
+                    <i class="fas fa-rocket benefit-icon"></i>
+                    <h3 class="benefit-title">Internet Ultrarrápido</h3>
+                    <p>Navega, trabaja y juega a la máxima velocidad con nuestra fibra óptica de última generación.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-headset benefit-icon"></i>
+                    <h3 class="benefit-title">Soporte Técnico Confiable</h3>
+                    <p>Nuestro equipo de expertos está disponible 24/7 para resolver cualquier inconveniente.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-globe-americas benefit-icon"></i>
+                    <h3 class="benefit-title">Cobertura Nacional</h3>
+                    <p>Llegamos a donde otros no llegan, conectando a toda Colombia.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-layer-group benefit-icon"></i>
+                    <h3 class="benefit-title">Planes Flexibles</h3>
+                    <p>Elige el plan que mejor se adapte a tus necesidades y presupuesto, sin cláusulas ocultas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="about-section">
+            <div class="container about-container">
+                <div class="about-text">
+                    <h3>Somos de aquí, para ti.</h3>
+                    <p>Somos una empresa colombiana, orgullosa de sus raíces y comprometida con ofrecer tecnología de punta y un servicio humano y cercano. Nacimos para acortar distancias y conectar a las personas con lo que más importa.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.imgur.com/gO9aB8d.png" alt="Mapa estilizado de Colombia con efecto de luz y conexión">
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="cta-final-section">
+            <div class="container">
+                <h2>Conéctate hoy con Señal Más.</h2>
+                <a href="#" class="cta-button">Contáctanos</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2024 Señal Más. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
