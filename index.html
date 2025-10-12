@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c361859e6c.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="src/logoseñal.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -31,8 +32,11 @@
                     <span></span>
                 </div>
             </button>
-            
-            <a href="contact.html" class="cta-button-header">Contactanos</a>
+            <button id="theme-toggle" class="theme-toggle-button" aria-label="Toggle light/dark mode">
+             <i class="fas fa-moon"></i>
+            </button>
+
+            <a href="contact.html" class="cta-button-header">Contacto</a>
         </div>
     </header>
 
@@ -83,7 +87,7 @@
                                 <p class="balance-text">Latencia</p>
                                 <div class="balance-amount-container">
                                     <p class="balance-amount">1 <span class="currency">ms</span></p>
-                                    <span class="percentage-badge" style="background-color: #e7f5ec; color: #22c55e;">Excelente</span>
+                                    <span class="percentage-badge" style="background-color: #e7f5ec; color: #2248c5;">Excelente</span>
                                 </div>
                             </div>
                         </div>
@@ -229,5 +233,7 @@
         </div>
     </footer>
     <script src="main.js"></script>
+    <script src="theme-switcher.js"></script>
+
 </body>
 </html>

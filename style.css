@@ -24,13 +24,13 @@ body { font-family: var(--font-main); background-color: #fcfcfd; color: var(--te
 
 /* --- Header --- */
 .main-header { padding-top: 20px; position: sticky; top: 20px; z-index: 100; width: 100%; max-width: 900px; margin: 0 auto; transition: all 0.3s ease-in-out; }
-.header-container { display: flex; align-items: center; justify-content: space-between; background-color: var(--white); border-radius: 12px; padding: 1rem 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid var(--gray); transition: all 0.3s ease-in-out; }
+.header-container { display: flex; align-items: center; justify-content: space-between; background-color: var(--white); border-radius: 50px; padding: 1rem 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid var(--gray); transition: all 0.3s ease-in-out; }
 .logo { display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem; font-weight: 800; color: var(--text-color); text-decoration: none; }
 .logo img { height: 32px; }
 .main-nav { display: flex; align-items: center; gap: 1.5rem; }
 .main-nav a { text-decoration: none; color: var(--dark-gray); font-weight: 600; font-size: 0.95rem; transition: color 0.3s ease; }
 .main-nav a:hover { color: var(--text-color); }
-.cta-button-header { background-color: #121212; color: var(--white); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background-color 0.3s ease; }
+.cta-button-header { background-color: #121212; color: var(--white); padding: 0.75rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background-color 0.3s ease; }
 .cta-button-header:hover { background-color: #333; }
 
 /* --- Header Scrolled State --- */
@@ -464,4 +464,430 @@ body { font-family: var(--font-main); background-color: #fcfcfd; color: var(--te
     .contact-content-wrapper {
         grid-template-columns: 1fr; /* Cambia de 2 columnas a 1 */
     }
+}
+
+/*
+--- =============================================
+--- Estilos para la Página de Planes (Tema Oscuro)
+--- =============================================
+*/
+
+/* --- Body con Tema Oscuro --- */
+body.dark-theme {
+    background-color: #0D1117; /* Fondo principal oscuro */
+    color: #c9d1d9;
+}
+
+/* --- Sección de Precios Oscura --- */
+.dark-pricing-section {
+    padding: 6rem 0;
+}
+
+.pricing-header-dark {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.pricing-header-dark h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.pricing-header-dark p {
+    font-size: 1.1rem;
+    color: #8b949e;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.plan-category-title {
+    text-align: center;
+    margin: 4rem 0 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 1rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.dark-plan-card {
+    background: #161B22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.dark-plan-card:hover {
+    transform: translateY(-8px);
+    border-color: #58a6ff;
+}
+
+/* Plan Recomendado */
+.dark-plan-card.recommended-dark {
+    border: 2px solid #58a6ff;
+    transform: scale(1.05);
+}
+
+.dark-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #58a6ff, #3a9dff);
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.dark-plan-header .plan-speed {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.dark-plan-header .plan-speed .speed-unit {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #8b949e;
+}
+
+
+.dark-plan-header h3 {
+    font-size: 1.2rem;
+    color: #8b949e;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.dark-plan-price {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 1.5rem 0;
+}
+
+.dark-plan-price .price-period {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #8b949e;
+}
+
+.dark-plan-features {
+    list-style: none;
+    text-align: left;
+    margin: 2rem 0;
+    color: #c9d1d9;
+}
+
+.dark-plan-features li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.dark-plan-features i {
+    color: #58a6ff;
+    margin-right: 0.75rem;
+}
+
+.dark-plan-button {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    border: 2px solid #30363d;
+    border-radius: 8px;
+    background: transparent;
+    color: #c9d1d9;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dark-plan-button:hover {
+    background-color: #30363d;
+    color: #fff;
+}
+
+.dark-plan-button.primary {
+    background-color: #58a6ff;
+    border-color: #58a6ff;
+    color: #0D1117;
+}
+
+.dark-plan-button.primary:hover {
+    background-color: #80bfff;
+    border-color: #80bfff;
+}
+
+.plan-icons-footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #30363d;
+    color: #8b949e;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.icon-item i {
+    font-size: 1.5rem;
+}
+
+/* Responsive para la página de planes */
+@media (max-width: 992px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .dark-plan-card.recommended-dark {
+        transform: scale(1);
+    }
+    .plan-icons-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+/*
+--- ==========================================================
+--- ESTILOS AVANZADOS PARA INTERRUPTOR DE TEMA (CLARO/OSCURO)
+--- ==========================================================
+*/
+
+/* --- VARIABLES DE COLOR POR TEMA --- */
+
+/* :root define las variables para el TEMA CLARO (por defecto) */
+:root {
+    --bg-color: #fcfcfd;
+    --text-color-primary: #121212;
+    --text-color-secondary: #6C757D;
+    --card-bg: #FFFFFF;
+    --card-border: #eef0f2;
+    --header-bg: rgba(255, 255, 255, 0.8);
+    --footer-bg: #f8f9fa;
+    --footer-text: #6C757D;
+    --primary-accent: #0D2C54; /* Azul oscuro */
+    --primary-accent-text: #FFFFFF;
+    --cta-secondary-bg: #eef0f2;
+    --cta-secondary-text: #0D2C54;
+    --highlight-bg: rgba(13, 44, 84, 0.1);
+    --input-bg: #FFFFFF;
+    --input-border: #ced4da;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* TEMA OSCURO (Cuando el body tiene la clase 'dark-theme') */
+body.dark-theme {
+    --bg-color: #001b42;
+    --text-color-primary: #ffffff;
+    --text-color-secondary: #ffffff;
+    --card-bg: #002963;
+    --card-border: #30363d;
+    --header-bg: rgba(0, 0, 0, 0.85);
+    --footer-bg: #161B22;
+    --footer-text: #ffffff;
+    --primary-accent: #7dbaff; /* Azul claro */
+    --primary-accent-text: #ffffff;
+    --cta-secondary-bg: #21262d;
+    --cta-secondary-text: #58a6ff;
+    --highlight-bg: rgba(88, 166, 255, 0.15);
+    --input-bg: #0D1117;
+    --input-border: #30363d;
+    --card-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+body.dark-theme .main-header.scrolled{
+    background-color: rgba(0, 0, 17, 0.507);
+    backdrop-filter: 20px;
+}
+/* --- APLICACIÓN GLOBAL DE VARIABLES --- */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, .logo, .main-nav a, .benefit-title-large {
+    color: var(--text-color-primary);
+    transition: color 0.3s;
+}
+
+p, label, .hero-subtitle, .benefit-description, .price-period {
+    color: var(--text-color-secondary);
+    transition: color 0.3s;
+}
+
+/* --- COMPONENTES --- */
+
+
+.header-container{
+    background-color: var(--header-bg);
+}
+
+.main-nav a {
+    color: var(--primary-accent);
+}
+
+.main-nav a:hover{
+    color: whitesmoke;
+}
+
+.hamburger-icon span {
+    background: var(--text-color-primary);
+}
+
+/* Botones */
+.cta-button.primary {
+    background-color: var(--primary-accent);
+    color: var(--primary-accent-text);
+}
+.cta-button.secondary {
+    background-color: var(--cta-secondary-bg);
+    color: var(--cta-secondary-text);
+    border: 1px solid var(--card-border);
+}
+.cta-button-header, .form-submit-button, .dark-plan-button.primary {
+    background-color: var(--primary-accent);
+    color: var(--primary-accent-text);
+}
+.cta-button-blue {
+    color: var(--primary-accent);
+}
+
+/* Hero Section */
+
+.highlight {
+    background-color: var(--highlight-bg);
+}
+
+/* Tarjetas */
+body.dark-theme section#beneficios{
+    background-color: #0D2C54;
+    color: var(--white);
+}
+
+body.dark-theme .analytics-card-placeholder, .dark-plan-card, .plan-card, .contact-info-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.body.dark-theme dark-plan-card:hover, .plan-card:hover {
+    border-color: var(--primary-accent);
+}
+body.dark-theme .benefit-tag, .plan-speed,.card-title, .balance-amount {
+    color: var(--white);
+}
+
+/* Formularios */
+.contact-form input, .contact-form textarea, .subscribe-form input {
+    background-color: var(--input-bg);
+    color: var(--text-color-primary);
+    border: 1px solid var(--input-border);
+}
+.contact-form input:focus, .contact-form textarea:focus, .subscribe-form input:focus {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px var(--highlight-bg);
+}
+.subscribe-form button {
+    background-color: var(--primary-accent);
+    color: var(--primary-accent-text);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    border-top: 1px solid var(--card-border);
+}
+.main-footer h4, .footer-logo {
+    color: var(--text-color-primary);
+}
+.footer-bottom {
+    border-top: 1px solid var(--card-border);
+}
+.social-links a {
+    background-color: var(--cta-secondary-bg);
+    color: var(--text-color-secondary);
+}
+.social-links a:hover {
+    background-color: var(--primary-accent);
+    color: var(--primary-accent-text);
+}
+
+
+/* Estilo del Botón de Cambio de Tema */
+.theme-toggle-button {
+    background: none;
+    border: 1px solid var(--card-border);
+    color: var(--text-color-secondary);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+.theme-toggle-button:hover {
+    background-color: var(--card-bg);
+    color: var(--primary-accent);
+}
+/*
+--- =============================================
+--- CORRECCIONES ADICIONALES PARA DARK MODE
+--- =============================================
+*/
+
+/* 1. Arregla el color del título de la tarjeta y otros textos en modo oscuro */
+body.dark-theme .card-title,
+body.dark-theme .benefit-tag, 
+body.dark-theme .plan-speed,
+body.dark-theme .balance-amount {
+    color: var(--text-color-primary); /* Usa la variable de color primario (blanco) */
+}
+
+/* 2. Aplica el fondo de tarjeta al formulario de contacto izquierdo en modo oscuro */
+body.dark-theme .contact-form-container {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid var(--card-border);
+}
+
+/* 3. Asegura que el color de texto del formulario sea legible en modo oscuro */
+body.dark-theme .contact-form label,
+body.dark-theme .contact-subtitle,
+body.dark-theme .contact-form-container h2 {
+    color: var(--text-color-primary);
+}
+
+/* 4. Arregla el color de la tarjeta de información derecha en contacto */
+body.dark-theme .contact-info-card {
+    background-color: #002963; /* Mantenemos el azul oscuro específico para esta tarjeta */
 }

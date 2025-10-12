@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes | Señal Más</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c361859e6c.js" crossorigin="anonymous"></script>
+</head>
+<body> <!-- Añadimos una clase para el tema oscuro -->
+
+    <!-- ===== Header ===== -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="src/logo (2).png" alt="Logo Señal Mas">
+                Señal Mas
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#beneficios">Beneficios</a>
+                <a href="plans.html">Planes</a>
+                <a href="contact.html">Contacto</a>
+                <button id="theme-toggle" class="theme-toggle-button" aria-label="Toggle light/dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+            </nav>
+            <a href="contact.html" class="cta-button-header">Contratar</a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <div class="hamburger-icon"><span></span><span></span><span></span></div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="dark-pricing-section">
+            <div class="container">
+                <div class="pricing-header-dark">
+                    <h1>Planes Flexibles para Todos</h1>
+                    <p>Elige la velocidad perfecta para ti. Conexión pura, sin complicaciones.</p>
+                </div>
+
+                <!-- ===== Planes TV + INTERNET ===== -->
+                <div class="plan-category-title">
+                    <h2>TV + Internet</h2>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Plan 1 -->
+                    <div class="dark-plan-card">
+                        <div class="dark-plan-header">
+                            <span class="plan-speed">150 <span class="speed-unit">MB</span></span>
+                            <h3>+TV</h3>
+                        </div>
+                        <div class="dark-plan-price">
+                            $80.000 <span class="price-period">/mensual</span>
+                        </div>
+                        <ul class="dark-plan-features">
+                            <li><i class="fas fa-check"></i> 100 Canales en HD</li>
+                            <li><i class="fas fa-check"></i> Internet Fibra Óptica</li>
+                        </ul>
+                        <a href="contact.html" class="dark-plan-button">Contratar Plan</a>
+                    </div>
+                    <!-- Plan 2 (Recomendado) -->
+                    <div class="dark-plan-card recommended-dark">
+                        <span class="dark-badge">Más Popular</span>
+                        <div class="dark-plan-header">
+                            <span class="plan-speed">200 <span class="speed-unit">MB</span></span>
+                            <h3>+TV</h3>
+                        </div>
+                        <div class="dark-plan-price">
+                            $100.000 <span class="price-period">/mensual</span>
+                        </div>
+                        <ul class="dark-plan-features">
+                            <li><i class="fas fa-check"></i> 100 Canales en HD</li>
+                            <li><i class="fas fa-check"></i> Internet Fibra Óptica</li>
+                        </ul>
+                        <a href="contact.html" class="dark-plan-button primary">Contratar Plan</a>
+                    </div>
+                    <!-- Plan 3 -->
+                    <div class="dark-plan-card">
+                        <div class="dark-plan-header">
+                           <span class="plan-speed">250 <span class="speed-unit">MB</span></span>
+                            <h3>+TV</h3>
+                        </div>
+                        <div class="dark-plan-price">
+                            $120.000 <span class="price-period">/mensual</span>
+                        </div>
+                        <ul class="dark-plan-features">
+                             <li><i class="fas fa-check"></i> 100 Canales en HD</li>
+                             <li><i class="fas fa-check"></i> Internet Fibra Óptica</li>
+                        </ul>
+                        <a href="contact.html" class="dark-plan-button">Contratar Plan</a>
+                    </div>
+                </div>
+
+                <!-- ===== Planes SOLO INTERNET ===== -->
+                <div class="plan-category-title">
+                    <h2>Solo Internet</h2>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Plan 1 -->
+                    <div class="dark-plan-card">
+                        <div class="dark-plan-header">
+                            <span class="plan-speed">200 <span class="speed-unit">MB</span></span>
+                            <h3>Fibra Óptica</h3>
+                        </div>
+                        <div class="dark-plan-price">
+                            $80.000 <span class="price-period">/mensual</span>
+                        </div>
+                         <ul class="dark-plan-features">
+                            <li><i class="fas fa-check"></i> Velocidad Simétrica</li>
+                            <li><i class="fas fa-check"></i> Ideal para Gaming y Streaming</li>
+                        </ul>
+                        <a href="contact.html" class="dark-plan-button">Contratar Plan</a>
+                    </div>
+                    <!-- Plan 2 (Recomendado) -->
+                    <div class="dark-plan-card recommended-dark">
+                         <span class="dark-badge">Más Popular</span>
+                        <div class="dark-plan-header">
+                            <span class="plan-speed">250 <span class="speed-unit">MB</span></span>
+                             <h3>Fibra Óptica</h3>
+                        </div>
+                        <div class="dark-plan-price">
+                            $100.000 <span class="price-period">/mensual</span>
+                        </div>
+                         <ul class="dark-plan-features">
+                            <li><i class="fas fa-check"></i> Velocidad Simétrica</li>
+                            <li><i class="fas fa-check"></i> Perfecto para Teletrabajo</li>
+                        </ul>
+                        <a href="contact.html" class="dark-plan-button primary">Contratar Plan</a>
+                    </div>
+                    <!-- Plan 3 -->
+                    <div class="dark-plan-card">
+                        <div class="dark-plan-header">
+                            <span class="plan-speed">300 <span class="speed-unit">MB</span></span>
+                             <h3>Fibra Óptica</h3>
+                        </div>
+                        <div class="dark-plan-price">
+                            $120.000 <span class="price-period">/mensual</span>
+                        </div>
+                         <ul class="dark-plan-features">
+                            <li><i class="fas fa-check"></i> Velocidad Simétrica</li>
+                            <li><i class="fas fa-check"></i> Máximo Rendimiento</li>
+                        </ul>
+                        <a href="contact.html" class="dark-plan-button">Contratar Plan</a>
+                    </div>
+                </div>
+                 <div class="plan-icons-footer">
+                    <div class="icon-item"><i class="fas fa-wifi"></i><span>Fibra Óptica</span></div>
+                    <div class="icon-item"><i class="fas fa-broadcast-tower"></i><span>WiFi 5G</span></div>
+                    <div class="icon-item"><i class="fas fa-receipt"></i><span>0 Costos Extras</span></div>
+                    <div class="icon-item"><i class="fas fa-exchange-alt"></i><span>Velocidad Simétrica</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="main-footer">
+        <div class="container-footer">
+            <div class="footer-col brand-info">
+                <a href="index.html" class="footer-logo">
+                    <img src="src/logo (2).png" alt="Logo Señal Mas">
+                    Señal Mas
+                </a>
+                <p class="slogan">Reimaginando la conexión.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="planes.html">Planes</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col about">
+                 <h4>Sobre Nosotros</h4>
+                 <p>Líderes en conexiones de alta velocidad, estables y seguras.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Señal Más. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="theme-switcher.js"></script>
+
+</body>
+</html>
