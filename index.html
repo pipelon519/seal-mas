@@ -3,93 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Señal Más | Conexión sin límites</title>
+    <title>Señal Más | Conexión organizada</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c361859e6c.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <canvas id="bg-canvas"></canvas>
-
     <header class="main-header">
-        <div class="container">
-            <h1 class="logo">Señal<span class="accent-color">+</span></h1>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="src/logo (2).png" alt="Logo Señal Mas">
+                Señal Mas
+            </a>
             <nav class="main-nav">
-                <a href="#inicio">Inicio</a>
                 <a href="#beneficios">Beneficios</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#contacto">Contacto</a>
+                <a href="plans.html">Planes</a>
+                <a href="Mision.html">Mision</a>
+                <a href="vision.html">Vision</a>
             </nav>
+            <a href="#" class="cta-button-header">Contactanos</a>
         </div>
     </header>
 
     <main>
         <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h2 class="hero-title">Más conexión. Más velocidad. Más señal.</h2>
-                <p class="hero-subtitle">Transformamos la manera en que te conectas con el mundo.</p>
-                <a href="#planes" class="cta-button">Descubre nuestros planes</a>
-            </div>
-        </section>
-
-        <section id="beneficios" class="benefits-section">
             <div class="container">
-                <div class="benefit-card">
-                    <i class="fas fa-rocket benefit-icon"></i>
-                    <h3 class="benefit-title">Internet Ultrarrápido</h3>
-                    <p>Navega, trabaja y juega a la máxima velocidad con nuestra fibra óptica de última generación.</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-headset benefit-icon"></i>
-                    <h3 class="benefit-title">Soporte Técnico Confiable</h3>
-                    <p>Nuestro equipo de expertos está disponible 24/7 para resolver cualquier inconveniente.</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-globe-americas benefit-icon"></i>
-                    <h3 class="benefit-title">Cobertura Nacional</h3>
-                    <p>Llegamos a donde otros no llegan, conectando a toda Colombia.</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-layer-group benefit-icon"></i>
-                    <h3 class="benefit-title">Planes Flexibles</h3>
-                    <p>Elige el plan que mejor se adapte a tus necesidades y presupuesto, sin cláusulas ocultas.</p>
+                <div class="hero-content">
+                    <p class="new-feature">
+                        <span class="new-badge">Nuevo</span> Conectividad total con Señal+
+                    </p>
+                    <h1 class="hero-title">
+                        La velocidad de internet que tu casa se <span class="highlight-container"><span class="highlight">Merece</span></span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Experimenta una conexión ultra rápida y confiable en cada rincón de tu hogar. Streaming, gaming y trabajo remoto sin límites.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="plans.html" class="cta-button primary"><i class="fas fa-wifi"></i> Obtén una Conexión</a>
+                        <a href="contact.html" class="cta-button secondary"><i class="far fa-calendar-alt"></i> Contactanos</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="nosotros" class="about-section">
-            <div class="container about-container">
-                <div class="about-text">
-                    <h3>Somos de aquí, para ti.</h3>
-                    <p>Somos una empresa colombiana, orgullosa de sus raíces y comprometida con ofrecer tecnología de punta y un servicio humano y cercano. Nacimos para acortar distancias y conectar a las personas con lo que más importa.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://i.imgur.com/gO9aB8d.png" alt="Mapa estilizado de Colombia con efecto de luz y conexión">
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="cta-final-section">
+        <section id="beneficios" class="detailed-benefits-section">
             <div class="container">
-                <h2>Conéctate hoy con Señal Más.</h2>
-                <a href="#" class="cta-button">Contáctanos</a>
+
+                <!-- Beneficio 1: Fibra Óptica -->
+                <div class="benefit-row">
+                    <div class="benefit-text-content">
+                        <div class="benefit-tag">
+                            <span class="benefit-tag-number">1</span>
+                            Máxima Velocidad
+                        </div>
+                        <h2 class="benefit-title-large">Conexión Pura con Fibra Óptica</h2>
+                        <p class="benefit-description">
+                           Navega a la velocidad de la luz. Nuestra red de fibra óptica de última generación te ofrece la conexión a internet más rápida y estable del mercado, ideal para streaming en 4K, juegos en línea y trabajo pesado sin interrupciones.
+                        </p>
+                        <a href="plans.html" class="cta-button-blue">Explora nuestros Planes de Fibra</a>
+                    </div>
+                    <div class="benefit-visual-content">
+                         <div class="analytics-card-placeholder">
+                            <div class="card-header">
+                                <div class="card-icon"><i class="fas fa-sitemap"></i></div>
+                                <span class="card-title">Estatus de Red: Fibra</span>
+                            </div>
+                            <div class="card-body">
+                                <p class="balance-text">Latencia</p>
+                                <div class="balance-amount-container">
+                                    <p class="balance-amount">1 <span class="currency">ms</span></p>
+                                    <span class="percentage-badge" style="background-color: #e7f5ec; color: #22c55e;">Excelente</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Beneficio 2: WiFi 5G -->
+                <div class="benefit-row reverse">
+                    <div class="benefit-text-content">
+                        <div class="benefit-tag">
+                            <span class="benefit-tag-number">2</span>
+                            Cobertura Total
+                        </div>
+                        <h2 class="benefit-title-large">WiFi 5G en Todo tu Hogar</h2>
+                        <p class="benefit-description">
+                           Libérate de los cables con la última tecnología WiFi 5G. Disfruta de una cobertura inalámbrica superior, conexiones más estables y velocidades de vértigo en cada rincón de tu casa, conectando todos tus dispositivos simultáneamente sin perder rendimiento.
+                        </p>
+                        <a href="plans.html" class="cta-button-blue">Escoge un wifi optimizado</a>
+                    </div>
+                    <div class="benefit-visual-content">
+                        <div class="analytics-card-placeholder">
+                             <div class="card-header">
+                                <div class="card-icon"><i class="fas fa-wifi"></i></div>
+                                <span class="card-title">Dispositivos Conectados</span>
+                            </div>
+                            <div class="card-body">
+                                <p class="balance-text">Rendimiento de Red</p>
+                                <div class="balance-amount-container">
+                                    <p class="balance-amount">12 <span class="currency">Activos</span></p>
+                                    <span class="percentage-badge" style="background-color: #e7f5ec; color: #22c55e;">Estable</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Beneficio 3: 0 Costos Extras -->
+                <div class="benefit-row">
+                    <div class="benefit-text-content">
+                        <div class="benefit-tag">
+                            <span class="benefit-tag-number">3</span>
+                            Total Transparencia
+                        </div>
+                        <h2 class="benefit-title-large">Cero Costos Extra. Sin Sorpresas.</h2>
+                        <p class="benefit-description">
+                          En Señal Más, la confianza es lo primero. Olvídate de cargos ocultos, tarifas de instalación sorpresa o ajustes inesperados en tu factura. El precio que contratas es el único precio que pagas. Claridad total desde el primer día.
+                        </p>
+                        <a href="plans.html" class="cta-button-blue">Ver Precios Claros</a>
+                    </div>
+                    <div class="benefit-visual-content">
+                        <div class="analytics-card-placeholder">
+                              <div class="card-header">
+                                <div class="card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                                <span class="card-title">Tu Factura Mensual</span>
+                            </div>
+                            <div class="card-body">
+                                <p class="balance-text">Total a Pagar</p>
+                                <div class="balance-amount-container">
+                                    <p class="balance-amount">$59.99 <span class="currency">USD</span></p>
+                                    <span class="percentage-badge" style="background-color: #e3e8f6; color: #1a73e8;">Fijo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Beneficio 4: Velocidad Simétrica -->
+                <div class="benefit-row reverse">
+                    <div class="benefit-text-content">
+                        <div class="benefit-tag">
+                            <span class="benefit-tag-number">4</span>
+                            Rendimiento Profesional
+                        </div>
+                        <h2 class="benefit-title-large">Velocidad Simétrica Real</h2>
+                        <p class="benefit-description">
+                           Ideal para creadores de contenido, profesionales que trabajan desde casa y gamers. Disfruta de la misma velocidad de subida que de bajada. Sube archivos pesados, realiza videoconferencias en alta definición y transmite en vivo sin ningún tipo de lag.
+                        </p>
+                        <a href="plans.html" class="cta-button-blue">Comprueba la Simetría</a>
+                    </div>
+                     <div class="benefit-visual-content">
+                        <div class="analytics-card-placeholder">
+                            <div class="card-header">
+                                <div class="card-icon"><i class="fas fa-exchange-alt"></i></div>
+                                <span class="card-title">Monitor de Velocidad</span>
+                            </div>
+                            <div class="card-body">
+                               <p class="balance-text">Carga / Descarga</p>
+                               <div class="balance-amount-container">
+                                    <p class="balance-amount">500/500 <span class="currency">Mbps</span></p>
+                                    <span class="percentage-badge" style="background-color: #e7f5ec; color: #22c55e;">Simétrico</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
     </main>
 
     <footer class="main-footer">
-        <div class="container footer-container">
-            <p>&copy; 2024 Señal Más. Todos los derechos reservados.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+        <div class="container">
+             <p>&copy; 2025 Señal Más. Reimaginando la conexión.</p>
         </div>
     </footer>
-
     <script src="main.js"></script>
 </body>
 </html>
