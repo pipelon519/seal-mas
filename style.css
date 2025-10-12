@@ -278,7 +278,7 @@ body { font-family: var(--font-main); color: var(--text-color); line-height: 1.6
 }
 
 .page-title-header {
-    background-color: #f8f9fa;
+    background-color: #84bdf7;
     padding: 2.5rem 0;
     text-align: center;
     border-bottom: 1px solid var(--gray);
@@ -688,8 +688,7 @@ body.dark-theme {
 
 :root {
     /* Aquí está el cambio: un azul muy claro y sutil */
-    --bg-color: -webkit-linear-gradient(to left, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
-
+    --bg-color: #f0f7ff;
     --text-color-primary: #121212;
     --text-color-secondary: #6C757D;
     --card-bg: #FFFFFF;
