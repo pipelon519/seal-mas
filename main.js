@@ -1,3 +1,16 @@
+const parallaxSections = document.querySelectorAll(".parallax-section");
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  parallaxSections.forEach(section => {
+    const inner = section.querySelector(".parallax-inner");
+    if(inner) {
+      inner.style.transform = `translateY(${scrollY * 0.03}px)`;
+    }
+  });
+});
+
+
+
 document.addEventListener("DOMContentLoaded", async () => {
     await loadFull(tsParticles);
     await tsParticles.load("particle-bg", { /* tu config */ });
