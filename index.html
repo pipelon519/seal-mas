@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Señal Más | Conexión organizada</title>
     <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c361859e6c.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="src/logoseñal.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div id="tsparticles"></div>
 
     <header class="main-header">
         <div class="header-container">
@@ -408,11 +409,13 @@
                     <div class="contact-info-card">
                         <div class="info-block">
                             <h4>Dirección</h4>
-                            <p>Av. Principal 123, Ciudad, País</p>
+                            <p>Calle 9 #24-29</p>
+                            <p>Barrio La Esperanza</p>
+                            <p>Florida, Valle</p>
                         </div>
                         <div class="info-block">
                             <h4>Contacto</h4>
-                            <p>Teléfono: (123) 456-7890</p>
+                            <p>Teléfono: 300 319 0253</p>
                             <p>Email: contacto@senalmas.com</p>
                         </div>
                         <div class="info-block">
@@ -431,6 +434,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
              <!-- Placeholder para el Mapa -->
             <div class="map-placeholder">
@@ -482,10 +486,65 @@
             <p>&copy; 2025 Señal Más. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="main.js"></script>
+    <script type="module" src="main.js" defer></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="contact-form.js"></script>
-    <div id="particles-js"></div>
-
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-interaction-particles-links"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-shape-circle"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-color"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-opacity"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-out-modes"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-size"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-move-base"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-interaction-light"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-basic"></script>
+    
+    <script>
+    (async () => {
+      await loadBasic(tsParticles);
+    
+      await tsParticles.load({
+        id: "tsparticles",
+        options: {
+          background: { color: "#0b0f2a" }, // azul oscuro profundo
+          fpsLimit: 60,
+          interactivity: {
+            detectsOn: "window",
+            events: {
+              onHover: { enable: true, mode: ["grab", "repulse"] }, // movimiento original
+              onClick: { enable: true, mode: "push" },
+              resize: true
+            },
+            modes: {
+              grab: { distance: 200, links: { opacity: 0.7 } },
+              repulse: { distance: 150, duration: 0.4 },
+              push: { quantity: 5 }
+            }
+          },
+          particles: {
+            number: { value: 120, density: { enable: true, area: 900 } },
+            color: { value: ["#00ffff", "#0099ff"] }, // azul neón
+            links: { enable: true, distance: 150, color: "#00ffff", opacity: 0.6, width: 1.2 },
+            move: {
+              enable: true,
+              speed: 2,       // movimiento fluido y natural
+              direction: "none",
+              random: false,
+              straight: false,
+              outModes: { default: "out" }
+            },
+            opacity: { value: { min: 0.4, max: 0.8 }, animation: { enable: true, speed: 1, minimumValue: 0.4, sync: false } },
+            size: { value: { min: 2, max: 4 }, animation: { enable: true, speed: 3, minimumValue: 2, sync: false } },
+            shape: { type: "circle" }
+          },
+          detectRetina: true
+        }
+      });
+    })();
+    </script>
+    
+    
 </body>
 </html>

@@ -1,5 +1,8 @@
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadFull(tsParticles);
+    await tsParticles.load("particle-bg", { /* tu config */ });
+  });
 document.addEventListener('DOMContentLoaded', () => {
-
     // --- Lógica del Header que se encoje al hacer scroll ---
     const header = document.querySelector('.main-header');
     window.addEventListener('scroll', () => {
@@ -41,5 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         }
-    
+        
+          
 });
